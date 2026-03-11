@@ -67,34 +67,36 @@ print(f"NOT bit a bit: ~5 = ~{bin(5)} = {bin(~5)}")
 Estructuras de control
 """
 
-# Listas
-frutas = ["manzana", "banana", "cereza"]
-print(f"Frutas: {frutas}")
+# Estructura condicional if
+x = 10
+if x > 0:
+    print(f"{x} es un número positivo.")
+elif x < 0:
+    print(f"{x} es un número negativo.")
+else:
+    print(f"{x} es cero.")
 
-# Tuples
-coordenadas = (10, 20)
-print(f"Coordenadas: {coordenadas}")
+# Estructura de repetición for
+print("Números del 0 al 4:")
+for i in range(5):
+    print(i)
 
-# Sets
-numeros = {1, 2, 3, 4, 5}
-print(f"Números: {numeros}")
+# Estructura de repetición while
+print("Números del 0 al 4 usando while:")
+i = 0
+while i < 5:
+    print(i)
+    i += 1 
 
-# Frozensets
-colores = frozenset(["rojo", "verde", "azul"])
-print(f"Colores: {colores}")
-
-# Diccionarios
-persona = {"nombre": "Alice", "edad": 30, "ciudad": "Madrid"}
-print(f"Persona: {persona}")
-
-# Bytearrays
-datos = bytearray(b"Hola Mundo")
-print(f"Datos: {datos}")
-
-# Range
-rango = range(1, 10)
-print(f"Rango: {list(rango)}")
-
-# Memoryview
-memoria = memoryview(b"Hola Mundo")
-print(f"Memoria: {memoria}")
+# Estructura de control de excepciones
+try:
+    resultado = 10 / 0
+except ZeroDivisionError:
+    print("Error: No se puede dividir por cero.")
+finally:
+    print("Este bloque se ejecuta siempre, haya o no una excepción.")
+    
+print("Dificultad extra:")
+for i in range(10, 55):
+    if i % 2 == 0 and i != 16 and i % 3 != 0: # Si i es par, no es 16 y no es múltiplo de 3, entonces se imprime
+        print(i)
